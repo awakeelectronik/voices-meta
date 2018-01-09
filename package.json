@@ -1,0 +1,14 @@
+{
+  "name": "voicesmeta",
+  "version": "1.0.0",
+  "description": "A site for news from Villavicencio",
+  "main": "index.js",
+  "repository": "git@github.com:awakeelectronik/voices-meta.git",
+  "author": "awakeelectronik <awakeelectronik@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-route": "^1.6.8",
+    "angularfire": "^2.3.0"
+  }
+}
