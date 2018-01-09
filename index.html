@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Periodismo desde Villavicencio, Meta por DIEGONOTICIAS" />
 	<meta name="keywords" content="noticias, Meta, opinión, periodismo, villavicencio, diegonoticias" />
-	<meta name="author" content="FREEHTML5.CO" />
+	<meta name="author" content="hipocondria.co" />
 
 	<!--
 	//////////////////////////////////////////////////////
@@ -37,8 +37,13 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 	<script type="text/javascript">
-		if (screen.width <= 699) {
-		document.location = "mobile.html";
+		if(location.href.substring(location.href.length-7,location.href.length-3)=="html" || 
+		location.href.substring(location.href.length-13,location.href.length-9)=="html"){
+			if (screen.width <= 700) {
+			document.location = "#!/mobile";
+			} else {
+				document.location = "#!/";
+			}
 		}
 	</script>
 
@@ -49,23 +54,20 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Salvattore -->
-	<link rel="stylesheet" href="css/salvattore.css">
 	<!-- Theme Style -->
 	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Librarys -->
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 	<script src="node_modules/angularfire/dist/angularfire.min.js"></script>
+	<script src="node_modules/angular-route/angular-route.min.js"></script>
+	
+	<!-- APP -->
 	<script src="app/app.js"></script>
 	
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -103,50 +105,8 @@
 	</header>
 	<!-- END .header -->
 
+	<div ng-view="" id="ng-view"></div>
 
-	<div id="fh5co-main">
-		<div class="container" load-more="ctrl.moreContents()">
-
-			<div class="row">
-				<center>
-					<img style="width:100%; box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.75); margin-bottom: 1em;" src="img/radio.png">
-				</center>
-			</div>
-			<div class="row">
-
-				<div style="border: 1px solid black" class="col-lg-2 col-md-3 col-xs-0 hideAds">
-					Publicidad
-					<div class="row">
-						<img style="width:100%" src="img/publicidadDesarrollo.png">
-					</div>
-				</div>
-				<div class="col-lg-7 col-md-6 col-xs-8">
-					<div class="animate-box">
-						<div id="fh5co-board" class="row" ng-if="ctrl.items.length>0">
-							<div class="item col-md-6 col-xs-12" ng-repeat="article in ctrl.items | orderBy:'-$id'">
-								<b class="fh5co-title">{{article.title}}</b>
-								<a class="image-popup fh5co-board-img" title="{{article.title}}"
-									ng-if="article.typeTemplate==1 || article.typeTemplate==3">
-									<img ng-src="{{article.image}}" alt="{{article.title}}">
-								</a>
-								<div class="fh5co-desc">{{article.abstract}}</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-3 col-xs-4">
-					<a class="twitter-timeline" data-lang="es" data-width="300" data-height="600" data-dnt="false" data-theme="light" href="https://twitter.com/diegonoticias">
-						Tweets por @diegonoticias
-					</a>
-					<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					<div>
-					 	<img src="img/lechoneria.png">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<footer id="fh5co-footer">
 		<div class="container">
@@ -159,7 +119,7 @@
 						<a href="#"><i class="icon-dribbble"></i></a>
 						<a href="#"><i class="icon-youtube"></i></a>
 					</p>
-					<p><small>&copy; La voz del Meta. <br>Designed by: <a href="#" target="_blank">wrodriguezmo@gmail.com</a> | Images by: <a href="http://pexels.com" target="_blank">Pexels</a> </small></p>
+					<p><small>&copy; La voz del Meta. <br>Designed by: <a href="#" target="_blank">wrodriguezmo@gmail.com</a> </small></p>
 				</div>
 			</div>
 		</div>
@@ -176,10 +136,9 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Magnific Popup -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
-	<!-- Salvattore -->
-	<script src="js/salvattore.min.js"></script>
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
 
+	<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

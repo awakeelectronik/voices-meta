@@ -7711,6 +7711,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   text-align: center;
   padding: 10px;
+  cursor: pointer;
 }
 #fh5co-board .item a {
   display: block;
@@ -8333,3 +8334,12 @@ a > img.fh5co-align-center {
 }
 
 /*# sourceMappingURL=style.css.map */
+.article {
+  margin: 1em;
+}
+
+.article h1 {    
+  color: #aa0b05;
+  font-weight: 600;
+  text-align: center;
+}
