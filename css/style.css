@@ -7593,11 +7593,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   display: block;
   float: none !important;
-  width: 200px;
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 3em;
   font-family: "Montserrat", arial, sans-serif;
   color: #000;
 }
@@ -7719,6 +7718,9 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-board .item .fh5co-desc {
   float: left;
   line-height: 24px;
+  padding: .3em;
+  margin: auto;
+  width: -moz-available;
 }
 #fh5co-board .item .fh5co-title {
   padding: 20px;
@@ -7736,6 +7738,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  border-radius: 0.5em;
 }
 #fh5co-board .item .fh5co-board-img {
   border-top-left-radius: 4px;
@@ -8147,6 +8150,9 @@ pre {
   .owl-theme .owl-controls .owl-nav {
     display: none;
   }
+  #fh5co-header .navbar-brand {
+    font-size: 1em;
+  }
 }
 
 .owl-theme .owl-controls .owl-nav [class*="owl-"] {
@@ -8334,12 +8340,29 @@ a > img.fh5co-align-center {
 }
 
 /*# sourceMappingURL=style.css.map */
-.article {
-  margin: 1em;
+#article {
+  margin: 2em;
 }
 
-.article h1 {    
+#article h1 {    
   color: #aa0b05;
   font-weight: 600;
   text-align: center;
+}
+
+#img-article {
+  width: -moz-max-content;
+  margin: 1em auto;
+  max-width: 100%;
+}
+
+#img-article img {
+  max-width: 100%;
+  border-radius: 1em;
+}
+  
+#content-article p{
+  text-align: justify !important;
+  font-size: 2em;
+  line-height: 1.2em;
 }

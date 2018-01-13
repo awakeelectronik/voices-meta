@@ -1,15 +1,16 @@
-<div ng-controller="articleCtrl as ctrl" class="article">
+<div ng-controller="articleCtrl as ctrl">
     <hr/>
-    <div class="article" ng-if="!ctrl.article || ctrl.article.state==2">
+    <div id="article" ng-if="!ctrl.article || ctrl.article.state==2">
         <h1 ng-bind="ctrl.article.title"></h1>
-        <img ng-if="ctrl.article.typeTemplate==1 || ctrl.article.typeTemplate==3"
-            ng-src="{{ctrl.image}}" alt="{{ctrl.article.title}}" 
-            style="max-width: 100%;"/>
+        <div id="img-article">
+            <img ng-if="ctrl.article.typeTemplate==1 || ctrl.article.typeTemplate==3"
+            ng-src="{{ctrl.image}}" alt="{{ctrl.article.title}}"/>
+        </div>
         
-        <div ng-bind-html="ctrl.article.template.texto"></div>
+        <div id="content-article" ng-bind-html="ctrl.article.template.texto"></div>
     </div>
 
-    <div class="article" ng-if="ctrl.article && ctrl.article.state!=2">
+    <div id="article" ng-if="ctrl.article && ctrl.article.state!=2">
         <h1>Este artículo está despublicado</h1>
     </div>
 </div>

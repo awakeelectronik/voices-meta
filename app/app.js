@@ -145,6 +145,7 @@ angular.module('voz', ['firebase', 'ngRoute'])
             if (vm.items.length == 0) {
                 articles.getContentsLimit()
                     .then((data) => {
+                        console.log(data)
                         vm.lastestArticle = data[0].$id;
                         if (data.length != 0)
                             return assignImage(data);

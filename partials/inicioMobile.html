@@ -6,7 +6,7 @@
                 </center>
             </div>
             <div id="fh5co-board" class="row" ng-if="ctrl.items.length>0">
-                <div class="item" ng-repeat="article in ctrl.items | orderBy:'-$id'" ng-click="ctrl.goArticle(article.$id, article.title)">
+                <div class="item" ng-repeat="article in ctrl.items | orderBy:'-creationDate'" ng-click="ctrl.goArticle(article.$id, article.title)">
                     <b class="fh5co-title">{{article.title}}</b>
                     <a class="image-popup fh5co-board-img" title="{{article.title}}" ng-if="article.typeTemplate==1 || article.typeTemplate==3">
                         <img ng-src="{{article.image}}" alt="{{article.title}}"/>
