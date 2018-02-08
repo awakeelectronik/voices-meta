@@ -8366,3 +8366,7 @@ a > img.fh5co-align-center {
   font-size: 2em;
   line-height: 1.2em;
 }
+
+#advertising img {
+  width: 100%
+}
