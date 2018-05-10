@@ -5,6 +5,7 @@
         <div id="img-article">
             <img ng-if="ctrl.article.typeTemplate==1 || ctrl.article.typeTemplate==3"
             ng-src="{{ctrl.image}}" alt="{{ctrl.article.title}}"/>
+            
         </div>
         
         <div id="content-article" ng-bind-html="ctrl.article.template.texto"></div>
