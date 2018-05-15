@@ -145,7 +145,6 @@ angular.module('voz', ['firebase', 'ngRoute'])
             if (vm.items.length == 0) {
                 articles.getContentsLimit()
                     .then((data) => {
-                        console.log(data)
                         vm.lastestArticle = data[0].$id;
                         if (data.length != 0)
                             return assignImage(data);
@@ -176,7 +175,8 @@ angular.module('voz', ['firebase', 'ngRoute'])
         vm.moreContents();
 
         vm.goArticle = (id, title) => {
-            $location.path( "/article/" + id + "/" + title);
+            newTitle = title.replace(/ /gi, "-");
+            $location.path( "/article/" + id + "/" + newTitle);
         };
     })
     .controller('articleCtrl', function ($sce, articles, images, $routeParams) {
