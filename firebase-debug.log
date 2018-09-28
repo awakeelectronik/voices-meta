@@ -1,0 +1,35 @@
+[debug] [2018-09-28T04:40:18.208Z] ----------------------------------------------------------------------
+[debug] [2018-09-28T04:40:18.210Z] Command:       /root/.nvm/versions/node/v9.3.0/bin/node /root/.nvm/versions/node/v9.3.0/bin/firebase deploy
+[debug] [2018-09-28T04:40:18.211Z] CLI Version:   3.16.0
+[debug] [2018-09-28T04:40:18.211Z] Platform:      linux
+[debug] [2018-09-28T04:40:18.211Z] Node Version:  v9.3.0
+[debug] [2018-09-28T04:40:18.211Z] Time:          Thu Sep 27 2018 23:40:18 GMT-0500 (-05)
+[debug] [2018-09-28T04:40:18.211Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-28T04:40:18.226Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-28T04:40:18.227Z] > authorizing via signed-in user
+[debug] [2018-09-28T04:40:18.229Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-28T04:40:18.229Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/LnPIR5nMT2pcHmyrdpmAeBLI_VPbbUm7VPGVeCnMG4BeGQ8EhzTMxft9KSJcUOQS',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Sep 27 2018 23:40:18 GMT-0500 (-05)
+[debug] [2018-09-28T04:40:18.821Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-28T04:40:18.836Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/meta-svoice  
+  
+ Thu Sep 27 2018 23:40:18 GMT-0500 (-05)
+[debug] [2018-09-28T04:40:19.811Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-28T04:40:19.814Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/meta-svoice/tokens  
+  
+ Thu Sep 27 2018 23:40:19 GMT-0500 (-05)
+[debug] [2018-09-28T04:40:21.019Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'meta-svoice'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing . directory for upload...
+[debug] [2018-09-28T04:40:24.473Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/meta-svoice/uploads/-LNTTZPEgbOO_emKSBFx?fileCount=3683&message=  
+  
+ Thu Sep 27 2018 23:40:24 GMT-0500 (-05)
