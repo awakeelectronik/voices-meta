@@ -1597,6 +1597,9 @@ p {
   .lead {
     font-size: 21px;
   }
+  #img-article {
+    display: flex;
+  }
 }
 
 @media (max-width: 990px) {
@@ -8358,6 +8361,7 @@ a > img.fh5co-align-center {
 
 #img-article img {
   max-width: 100%;
+  margin: auto;
   border-radius: 1em;
 }
   
@@ -8367,10 +8371,15 @@ a > img.fh5co-align-center {
   line-height: 1.2em;
 }
 
-#advertising img {
-  width: 100%
+@media (max-width: 721px) {
+  #advertising img {
+    width: 100%;
+  }
+  #content-article p {
+    font-size: 1.3em;
+  }
 }
-
+  
 .clear {
   clear: both;
 }
