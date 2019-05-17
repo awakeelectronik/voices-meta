@@ -8393,3 +8393,7 @@ a > img.fh5co-align-center {
   display: block;
   float: none !important;
 } */
+
+#advertising img {
+  width: 100%;
+}
