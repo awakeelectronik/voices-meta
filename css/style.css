@@ -1602,9 +1602,19 @@ p {
   }
 }
 
+.showAds {
+  display: none;  
+}
+.showAds img {
+  width: 100%;
+}
+
 @media (max-width: 990px) {
   .hideAds {
     display: none;
+  }
+  .showAds {
+    display: block;
   }
 }
 
@@ -8397,3 +8407,20 @@ a > img.fh5co-align-center {
 #advertising img {
   width: 100%;
 }
+.video svg {
+  position: absolute;
+  left: 40%;
+  width: 20%;
+  top: -10px;
+}
+@media (max-width: 500px) {
+  .video svg {
+    top: 50px;
+  }
+}
+
+.video img {
+  border-radius: 0.5em;
+  width: 100%;
+}
+

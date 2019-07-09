@@ -5,8 +5,10 @@
         <div id="img-article">
             <img ng-if="ctrl.article.typeTemplate==1 || ctrl.article.typeTemplate==3"
             ng-src="{{ctrl.image}}" alt="{{ctrl.article.title}}"/>
-            
         </div>
+        <center ng-if="ctrl.article.typeTemplate==2 || ctrl.article.typeTemplate==3">
+            <iframe width="100%" height="315" ng-src="{{ctrl.article.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
         
         <div id="content-article" ng-bind-html="ctrl.article.template.texto"></div>
     </div>

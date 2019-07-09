@@ -139,6 +139,9 @@ angular.module('voz', ['firebase', 'ngRoute'])
         var vm = this;
         vm.items = [];
 
+        vm.prueba = function(id){
+            return `http://img.youtube.com/vi/${id}/2.jpg`
+        }
         vm.moreContents = function () {
             if (vm.busy || vm.completed) return vm.busy;
             vm.busy = true;
@@ -163,7 +166,7 @@ angular.module('voz', ['firebase', 'ngRoute'])
                         return assignImage(data)
                     })
                     .then((data) => {
-                        data.splice(data.length - 1);
+                        data.splice(0, 1);
                         vm.items = vm.items.concat(data);
                         if (!data.length == 0) vm.busy = false;
                         else vm.completed = true;
@@ -185,9 +188,11 @@ angular.module('voz', ['firebase', 'ngRoute'])
         .then((article) => {
             vm.article = article;
             vm.article.template.texto = $sce.trustAsHtml(article.template.texto);
-            });
-        images($routeParams.id + ".png")
-            .then((imageUrl) => {
-                vm.image = imageUrl;
-            })
+            vm.article.video = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+article.video);
+            if(vm.article.typeTemplate==1 || vm.article.typeTemplate==3)
+                images($routeParams.id + ".png")
+                    .then((imageUrl) => {
+                        vm.image = imageUrl;
+                    })
+        });
     }); 
