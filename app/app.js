@@ -139,8 +139,8 @@ angular.module('voz', ['firebase', 'ngRoute'])
         var vm = this;
         vm.items = [];
 
-        vm.prueba = function(id){
-            return `http://img.youtube.com/vi/${id}/2.jpg`
+        vm.returnImageFromYoutube = function(id){
+            return `https://img.youtube.com/vi/${id}/2.jpg`
         }
         vm.moreContents = function () {
             if (vm.busy || vm.completed) return vm.busy;
