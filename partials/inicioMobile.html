@@ -1,13 +1,11 @@
 <div id="fh5co-main" ng-controller="loadArticles as ctrl">
         <div class="container" load-more="ctrl.moreContents()">
-            <div class="row">
-                <center>
-                    <div id="Reproductor">
-                        <audio controls="controls" style="width: 95%;">
-                            <source src="http://62.210.38.137:8108">
-                        </audio>
-                    </div>
-                </center>
+            
+            <div class="siema">
+                <img src="img/mobile/lechoneria-julian-vasquez.jpeg" alt="publicidad lechoneria"/>
+                <img src="img/mobile/laCopa.jpg" alt="publicidad copas menstruales"/>
+                <img src="img/mobile/descanso.jpeg" alt="publicidad colchones el descanso"/>
+                <img src="img/mobile/buy-btc.jpeg" alt="publicidad bitcoins"/>
             </div>
             <div id="fh5co-board" class="row" ng-if="ctrl.items.length>0">
                 <div class="item" ng-repeat="article in ctrl.items | orderBy:'-creationDate'" ng-click="ctrl.goArticle(article.$id, article.title)">

@@ -7519,7 +7519,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 480px) {
   #fh5co-header {
     padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 0em;
   }
 }
 #fh5co-header .navbar-header {
@@ -7696,7 +7696,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-main {
-  padding-top: 5em;
+  padding-top: 1em;
 }
 
 @media screen and (min-width: 600px) {
@@ -8424,3 +8424,6 @@ a > img.fh5co-align-center {
   width: 100%;
 }
 
+.siema img{
+  width: 100%
+}

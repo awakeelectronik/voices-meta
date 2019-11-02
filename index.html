@@ -36,7 +36,9 @@
 	<meta property="og:description" content="" />
 	<meta name="propeller" content="3ab2f1d65c460865475841f4b2894158">
 
+	<script src="node_modules/siema/dist/siema.min.js"></script>
 	<script type="text/javascript">
+
 		if (location.href.substring(location.href.length - 7, location.href.length - 3) == "html" ||
 			location.href.substring(location.href.length - 13, location.href.length - 9) == "html" ||
 			location.href.substring(location.href.length - 7, location.href.length) == "com/#!/") {
@@ -65,7 +67,6 @@
 	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 	<script src="node_modules/angularfire/dist/angularfire.min.js"></script>
 	<script src="node_modules/angular-route/angular-route.min.js"></script>
-
 	<!-- APP -->
 	<script src="app/app.js"></script>
 
@@ -99,6 +100,9 @@
 		<ul>
 			<li class="active">
 				<a href="index.html">Inicio</a>
+			</li>
+			<li>
+				<a href="https://admin.lavozdelmeta.com">Administrador</a>
 			</li>
 			<li>
 				<a href="about.html">Acerca de mí</a>
@@ -143,6 +147,15 @@
 	</header>
 	<!-- END .header -->
 
+	<div class="row">
+		<center>
+			<div id="Reproductor">
+				<audio controls="controls" style="width: 90%;">
+					<source src="http://62.210.38.137:8108/;">
+				</audio>
+			</div>
+		</center>
+	</div>
 	<div ng-view="" id="ng-view"></div>
 
 	<footer id="fh5co-footer">

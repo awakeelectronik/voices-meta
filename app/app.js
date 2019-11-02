@@ -138,6 +138,7 @@ angular.module('voz', ['firebase', 'ngRoute'])
     .controller('loadArticles', function (articles, assignImage, $location) {
         var vm = this;
         vm.items = [];
+        var mySiema;
 
         vm.returnImageFromYoutube = function(id){
             return `https://img.youtube.com/vi/${id}/2.jpg`
@@ -181,6 +182,15 @@ angular.module('voz', ['firebase', 'ngRoute'])
             newTitle = title.replace(/ /gi, "-");
             $location.path( "/article/" + id + "/" + newTitle);
         };
+        if (screen.width <= 700) {
+            setTimeout(()=> {
+                mySiema = new Siema({
+                    selector: '.siema'
+                });
+                console.log("proo")
+                setInterval(() => mySiema.next(), 3000)
+            },1000)
+        }
     })
     .controller('articleCtrl', function ($sce, articles, images, $routeParams) {
         var vm = this;
