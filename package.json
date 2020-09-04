@@ -10,7 +10,7 @@
     "angular": "^1.6.8",
     "angular-route": "^1.6.8",
     "angularfire": "^2.3.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.13.1",
     "siema": "^1.5.1"
   }
 }
