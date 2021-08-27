@@ -157,9 +157,12 @@
 		</center>
 	</div>
 	<div>
-		<center>
-			<img src="img/llanogas.jpg" alt="Publicidad Llanogas" width="94%">
-		</center>
+		<a href="http://www.meta.gov.co/">
+			<center>
+				<img id="verde" style="display: none;" src="img/gober-verde.jpeg" alt="Publicidad Llanogas" width="94%">
+				<img id="naranja" style="display: none;" src="img/gober-naranja.jpeg" alt="Publicidad Llanogas" width="94%">
+			</center>
+		</a>
 	</div>
 	<div ng-view="" id="ng-view"></div>
 
@@ -196,6 +199,11 @@
 		</div>
 	</footer>
 
+	<script>
+		if(new Date().getDate()<16)
+			document.getElementById("verde").style.display = "block"
+		else document.getElementById("naranja").style.display = "block"
+	</script>
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
